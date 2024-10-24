@@ -8,7 +8,7 @@ Data processing and downstream analysis done by [Anton Zhelonkin](https://github
 
 Below is the general logic of the pipeline.
 
-![image](https://github.com/tony-zhelonkin/RNAseq_pipelineDock/blob/master/RnaSeqDock_pipeline.png?raw=true)
+![image](https://github.com/MogilenkoLabVUMC/RNAseq_pipelineDock_MECR_KayLee/blob/master/RnaSeqDock_pipeline.png?raw=true)
 
 *Note!* The pipeline is just a set of separate scripts currently. You need to tailor the scripts, the paths to your use case and the data at hand.
 It`s not a press-one-button story for the moment.
