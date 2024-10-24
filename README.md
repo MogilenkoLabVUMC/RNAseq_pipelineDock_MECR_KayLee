@@ -2,6 +2,7 @@
 
 This is the fork, representing state of the Docker [pipeline](https://github.com/tony-zhelonkin/RNAseq_pipelineDock) at a timepoint, when it was used for the bulk RNAseq data preprocessing for the [paper](https://www.biorxiv.org/content/10.1101/2024.07.08.602554v1) *`Mitochondrial Fatty Acid Synthesis and Mecr Regulate CD4+ T Cell Function and Oxidative Metabolism`, 2024* by KayLee Steiner, Jeffrey Rathmell et al.
 
+Data processing and downstream analysis done by [Anton Zhelonkin](https://github.com/tony-zhelonkin), supervised by [Denis Mogilenko](https://github.com/MogilenkoLab)
 
 # The Pipeline logic
 
@@ -9,7 +10,7 @@ Below is the general logic of the pipeline.
 
 ![image](https://github.com/tony-zhelonkin/RNAseq_pipelineDock/blob/master/RnaSeqDock_pipeline.png?raw=true)
 
-*Note!* The pipeline is just a set of separate scripts currently. You need to tailor the scripts, the paths to your use case.
+*Note!* The pipeline is just a set of separate scripts currently. You need to tailor the scripts, the paths to your use case and the data at hand.
 It`s not a press-one-button story for the moment.
 
 # Processing details
@@ -50,9 +51,6 @@ docker run --name <docker_container_name> \
 ```
 
 Once you run the command you end up in the interactive `bash` shell under the Docker container environment. Keep in mind that all the paths will be relative to the Docker virtual environment.
-
-After that I perform all my processing from the Docker container shell. Oftentimes, I start the tools and leave them work under the Docker environment.
-
 
 ## 3. Build the reference genome index
 
