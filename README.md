@@ -12,7 +12,7 @@ Below is the general logic of the pipeline.
 *Note!* The pipeline is just a set of separate scripts currently. You need to tailor the scripts, the paths to your use case.
 It`s not a press-one-button story for the moment.
 
-# Processing *`Mitochondrial Fatty Acid Synthesis and Mecr Regulate CD4+ T Cell Function and Oxidative Metabolism`*
+# Processing details
 
 The exact processing vignette for the dataset was as follows.
 
@@ -54,7 +54,7 @@ Once you run the command you end up in the interactive `bash` shell under the Do
 After that I perform all my processing from the Docker container shell. Oftentimes, I start the tools and leave them work under the Docker environment.
 
 
-## 3. Building reference genome index
+## 3. Build the reference genome index
 
 Build index with sjdbOverhang 100, which performs well for reads of various length
 
@@ -77,6 +77,19 @@ To inspect the QC metric before the alignment we used *`getPreAlignmentQC.sh`* s
 ```
 /path/to/script/getPreAlignmentQC.sh
 ```
+
+We trimmed the reads off of the Illumina adapter sequences and filtered for read quality using *`Trimmomatic`* under the *`runTrim.sh`* script. The *`Trimmomatic`* parameters were as follows:
+
+```
+trimmomatic PE -threads 8 \
+  "${R1_FILE}" "${R2_FILE}" \
+  "${TRIMMED_R1}" /dev/null \
+  "${TRIMMED_R2}" /dev/null \
+  ILLUMINACLIP:"${ADAPTERS}":"${ILLUMINACLIP_SETTINGS}" \
+  LEADING:3 TRAILING:3 \
+  SLIDINGWINDOW:4:20 MINLEN:36 \
+```
+The adapters folder in the Docker built is located in *`ADAPTERS="/usr/share/Trimmomatic-0.39/adapters/TruSeq3-PE.fa` and the ILLUMINACLIP_SETTINGS were "2:30:10".
 
 ## 5. Align the reads
 
