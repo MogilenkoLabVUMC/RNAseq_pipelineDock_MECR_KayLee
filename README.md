@@ -4,6 +4,8 @@ This is the fork, representing state of the Docker bulk RNAseq processing [pipel
 
 Data processing and downstream analysis done by [Anton Zhelonkin](https://github.com/tony-zhelonkin), supervised by [Denis Mogilenko](https://github.com/MogilenkoLab)
 
+The code for downstream analysis is available [here](https://github.com/MogilenkoLabVUMC/MECR_KO_in_vivo-KayLee)
+
 # The Pipeline logic
 
 Below is the general logic of the pipeline.
