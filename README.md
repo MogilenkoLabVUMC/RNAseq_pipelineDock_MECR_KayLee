@@ -1,6 +1,6 @@
 # General information
 
-This is the fork, representing state of the Docker [pipeline](https://github.com/tony-zhelonkin/RNAseq_pipelineDock) at a timepoint, when it was used for the bulk RNAseq data preprocessing for the [paper](https://www.biorxiv.org/content/10.1101/2024.07.08.602554v1) *`Mitochondrial Fatty Acid Synthesis and Mecr Regulate CD4+ T Cell Function and Oxidative Metabolism`, 2024* by KayLee Steiner, Jeffrey Rathmell et al.
+This is the fork, representing state of the Docker bulk RNAseq processing [pipeline](https://github.com/tony-zhelonkin/RNAseq_pipelineDock) at a timepoint, when it was used for pre-processing the data generated from experiments in the [paper](https://www.biorxiv.org/content/10.1101/2024.07.08.602554v1) *`Mitochondrial Fatty Acid Synthesis and Mecr Regulate CD4+ T Cell Function and Oxidative Metabolism`, 2024* by KayLee Steiner, Jeffrey Rathmell et al.
 
 Data processing and downstream analysis done by [Anton Zhelonkin](https://github.com/tony-zhelonkin), supervised by [Denis Mogilenko](https://github.com/MogilenkoLab)
 
